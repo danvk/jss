@@ -44,8 +44,11 @@ Sample JSON file for demos:
 Pull out all values with key "name", from anywhere in the JSON.
 
     $ jss .name file.json
-    "foo"
-    "dan"
+    
+```json
+"foo"
+"dan"
+```
 
 Remove fields named "metadata", wherever they occur (JSON→JSON transform):
 
