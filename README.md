@@ -13,64 +13,84 @@ you better at writing CSS selectors.
 Usage
 -------
 
+Install:
+
     $ pip install -g jss
 
-    $ cat file.json
-    {
-      "foo": [
-        "bar",
-        {
-          "baz": "quux"
-        }
-      ],
-      "wut": {
-        "name": "foo",
-        "metadata": {
-          "owner": "danvk",
-          "blah": "whatever"
-        }
-      },
-      "name": "dan"
-    }
+Sample JSON file for demos:
 
-    # Pull out all values with key "name", from anywhere in the JSON.
+    $ cat file.json
+    
+```json
+{
+  "foo": [
+    "bar",
+    {
+      "baz": "quux"
+    }
+  ],
+  "wut": {
+    "name": "foo",
+    "metadata": {
+      "owner": "danvk",
+      "blah": "whatever"
+    }
+  },
+  "name": "dan"
+}
+```
+
+
+Pull out all values with key "name", from anywhere in the JSON.
+
     $ jss .name file.json
     "foo"
     "dan"
 
-    # Remove fields named "metadata", wherever they occur (JSON→JSON transform):
+Remove fields named "metadata", wherever they occur (JSON→JSON transform):
+
     $ jss -v .metadata file.json
+    
+```json
+{
+  "foo": [
+    "bar",
     {
-      "foo": [
-        "bar",
-        {
-          "baz": "quux"
-        }
-      ],
-      "wut": {
-        "name": "foo"
-      },
-      "name": "dan"
+      "baz": "quux"
     }
+  ],
+  "wut": {
+    "name": "foo"
+  },
+  "name": "dan"
+}
+```
 
-    # Keep only fields named "name", plus their ancestors (JSON→JSON transform):
+Keep only fields named "name", plus their ancestors (JSON→JSON transform):
+
     $ jss -k .name file.json
-    {
-      "wut": {
-        "name": "foo"
-      },
-      "name": "dan"
-    }
+    
+```json
+{
+  "wut": {
+    "name": "foo"
+  },
+  "name": "dan"
+}
+```
 
-    # Keep only top-level entries with "whatever" in some value underneath them:
-    # (JSON→JSON transform using jQuery-style selectors):
+Keep only top-level entries with "whatever" in some value underneath them (JSON→JSON transform using jQuery-style selectors):
+
     $ jss -k ':root>*:has(:contains("whatever"))' file.json
-    {
-      "wut": {
-        "name": "foo",
-        "metadata": {
-          "owner": "danvk",
-          "blah": "whatever"
-        }
-      }
+
+```json
+{
+  "wut": {
+    "name": "foo",
+    "metadata": {
+      "owner": "danvk",
+      "blah": "whatever"
     }
+  }
+}
+```
