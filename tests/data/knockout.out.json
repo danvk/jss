@@ -1,0 +1,35 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Polygon"
+      },
+      "type": "Feature",
+      "properties": {
+        "description": "Aruba is an island.",
+        "wikipedia_url": "http://en.wikipedia.org/wiki/Aruba",
+        "area_km2": 154.67007756254557,
+        "population": 103065,
+        "population_year": "???",
+        "name": "Aruba"
+      },
+      "id": "ABW"
+    },
+    {
+      "geometry": {
+        "type": "Polygon"
+      },
+      "type": "Feature",
+      "properties": {
+        "description": "Afghanistan is a landlocked country located in Central Asia.",
+        "wikipedia_url": "http://en.wikipedia.org/wiki/Afghanistan",
+        "area_km2": 883481.7645257941,
+        "population": 28400000,
+        "population_year": "???",
+        "name": "Afghanistan"
+      },
+      "id": "AFG"
+    }
+  ]
+}

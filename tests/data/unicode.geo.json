@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -69.899121,
+              12.452002
+            ],
+            [
+              -69.895703,
+              12.422998
+            ],
+            [
+              -69.942187,
+              12.438525
+            ],
+            [
+              -70.00415,
+              12.500488
+            ],
+            [
+              -70.066113,
+              12.546973
+            ],
+            [
+              -70.050879,
+              12.59707
+            ],
+            [
+              -70.035107,
+              12.614111
+            ],
+            [
+              -69.973145,
+              12.567627
+            ],
+            [
+              -69.911816,
+              12.480469
+            ],
+            [
+              -69.899121,
+              12.452002
+            ]
+          ]
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "description": "Aruba is an island 33 kilometres long; it is located about 1,600 kilometres west of the Lesser Antilles in the southern Caribbean Sea and 27 kilometres north of the coast of Venezuela. Together with Bonaire and Curaçao, it forms a group referred to as the ABC islands.",
+        "population_source": "World Factbook",
+        "freebase_mid": "/m/0j11",
+        "name": "Aruba",
+        "population_source_url": "https://www.cia.gov/library/publications/the-world-factbook/fields/2119.html",
+        "area_km2_source_url": "https://www.cia.gov/library/publications/the-world-factbook/fields/2147.html",
+        "population_date": "July 2014",
+        "wikipedia_url": "http://en.wikipedia.org/wiki/Aruba",
+        "area_km2": 180,
+        "area_km2_source": "World Factbook",
+        "population": 110663
+      },
+      "id": "ABW"
+    }
+  ]
+}

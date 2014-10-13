@@ -1,0 +1,15 @@
+{
+  "foo": [
+    "bar",
+    {
+      "baz": "quux"
+    }
+  ],
+  "wut": {
+    "name": "foo",
+    "metadata": {
+      "owner": "danvk",
+      "blah": "whatever"
+    }
+  }
+}
