@@ -15,12 +15,12 @@ Usage
 
 Install:
 
-    $ pip install -g jss
+    $ pip install jss
 
 Sample JSON file for demos:
 
     $ cat file.json
-    
+
 ```json
 {
   "foo": [
@@ -44,7 +44,7 @@ Sample JSON file for demos:
 Pull out all values with key "name", from anywhere in the JSON.
 
     $ jss .name file.json
-    
+
 ```json
 "foo"
 "dan"
@@ -53,7 +53,7 @@ Pull out all values with key "name", from anywhere in the JSON.
 Remove fields named "metadata", wherever they occur (JSON→JSON transform):
 
     $ jss -v .metadata file.json
-    
+
 ```json
 {
   "foo": [
@@ -72,7 +72,7 @@ Remove fields named "metadata", wherever they occur (JSON→JSON transform):
 Keep only fields named "name", plus their ancestors (JSON→JSON transform):
 
     $ jss -k .name file.json
-    
+
 ```json
 {
   "wut": {
